@@ -1,6 +1,11 @@
 <?php
-session_start();
+
+// echo "session is: " . json_encode($_SESSION['cart']);
 require 'connect.php';
+session_start();
+if (!isset($_SESSION['cart'])){
+	$_SESSION['cart']=array();
+}
 echo "<html>";
 echo "<head><script type='text/javascript' src='js/jquery-1.11.2.min.js'></script><script type='text/javascript' src='js/bootstrap.min.js'></script><link href='css/bootstrap.min.css' rel='stylesheet'><link href='css/style.css' rel='stylesheet'></head>";
 ?>

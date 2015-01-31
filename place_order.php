@@ -20,7 +20,7 @@ if(! $retval )
 {
   die('Could not enter data: ' . mysql_error());
 }
-$_SESSION['cart']="";
+$_SESSION['cart']=array();
 echo "Order placed successfully. Your order number is " . $getOrderID;
 mysql_close($connect);
 ?>

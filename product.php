@@ -3,9 +3,8 @@
 require 'inc/main.php';
 require 'inc/connect.php';
 $cart[]=$_SESSION['cart'];
-
+echo "session is: " . session_id();
 $productnamesearch=$_POST['productnamesearch'];
-
 
 $sql = "SELECT * FROM products WHERE `productuniqueid` = '$productnamesearch'";
 
@@ -31,19 +30,14 @@ while($row = mysql_fetch_array( $query )) {
   echo "Price: $" . $row['productprice'] . "<br>";
   echo "Product ID: " . $row['productuniqueid'] . "<br>";
   echo "Quantity available: " . $row['productinventory'] . "<br><br>";
-  
   echo "<form action='' method='post'><input type='submit' name='add' value='Add to cart'><input class='hide' type='text' name='productnamesearch' value='" . $productnamesearch . "'></form>";
-
- 
 }
-
 if ($_POST['add']){
-	$newItem = json_encode($productnamesearch);
 	array_push($_SESSION['cart'],$productnamesearch);
-	echo "<span class='alert-success'>Item has been added to your cart.</span>";
+	echo "<span class='alert-success'>Item has been added to your cart.</span> <br><br><a href='products.php'>Continue Shopping?</a>";
 }
- echo "</div>";
-   echo "<div class='col-lg-2'></div>";
+  echo "</div>";
+  echo "<div class='col-lg-2'></div>";
   echo "</div>";
   echo "</div>";
 mysql_close($connect);

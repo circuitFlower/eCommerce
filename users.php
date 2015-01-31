@@ -3,7 +3,7 @@ require 'inc/connect.php';
 require 'inc/main.php';
 
 	$email=$_SESSION['email'];
-	$sql = "SELECT * FROM users WHERE `email`='$email'";
+	$sql = "SELECT * FROM users";
 	mysql_select_db('Mannix');
 	$query = mysql_query( $sql, $connect );
 	if(! $query ){
@@ -11,7 +11,7 @@ require 'inc/main.php';
 	}
 	
 	while($row = mysql_fetch_array( $query )) {
-	if($_SESSION['role'] == $row['role']){
+	if($_SESSION['role'] == 'admin'){
 		echo $row['firstname'] . " " . $row['lastname'] . "<br>";
 		echo "Billing Address: <br>" . $row['billingaddress'] . "<br>";
 		echo "Shipping Address: <br>" . $row['shippingaddress'] . "<br>";

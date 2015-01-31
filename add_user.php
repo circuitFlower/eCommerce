@@ -47,6 +47,7 @@ if (isset($_POST['submit'])){
 	echo "Password: <input class='floatRight' type='password' name='pword'><br><br>";
 	echo "<input type='submit' name='submit'>";
 	echo "</form>";
+	echo "Already a registered user? Great! <a href='login.php'>Log in here.</a>";
 	}
 ?>
 </div>

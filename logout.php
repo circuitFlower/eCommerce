@@ -1,14 +1,7 @@
 
 <?php
 require 'inc/main.php';
-$_SESSION['cart'] = "";
-$_SESSION['firstname'] = '';
-$_SESSION['lastname'] = '';
-$_SESSION['billingaddress'] = '';
-$_SESSION['shippingaddress'] = '';
-$_SESSION['email'] = '';
-$_SESSION['phone'] = '';
-$_SESSION['role'] = '';
+session_destroy();
 echo "You are logged out";
 ?>
 </div>
