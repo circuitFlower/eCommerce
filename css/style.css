@@ -1,0 +1,130 @@
+@font-face{
+	font-family: 'brand';
+	src: url('../fonts/KaushanScriptRegular.otf');
+}
+container-fluid{
+	
+}
+#brand {
+	font-family: 'brand';
+	font-size:2em;
+	color: #009900;
+	
+}
+.nav{
+	font-size: .7em;
+}
+.navbar{
+	background-color:#333;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: #009900;
+}
+header {	
+	display: inline;
+	height:10%;
+}
+footer{
+	background-color:#999;
+	color: #fff;
+	height:5%;
+	text-align:center;
+	margin-top:4%;
+}
+
+h1 {
+	font-family: 'brand';
+}
+h3 {
+	color: 'purple';
+}
+a{
+	color:#990000;
+}
+html {
+	color: 'blue';
+}
+ul {
+	list-style: none;
+}
+li {
+	font-size:1.5em;
+}
+.mainContent{
+	height:80%;
+/* 	background-color: #ddddff; */
+}
+.hide {
+	opacity:0;
+}
+.floatRight{
+	float:right;
+	margin-right:65%;
+}
+.product_listing{
+/* 	border: 1px solid #999; */
+	height: 45%;
+	width: 20%;
+	margin:2%;
+	text-align:center;
+	vertical-align:bottom;
+}
+.product_listing img{
+	display:block;
+	/* 
+height:70%;
+	width:auto;
+ */
+}
+.single_product{
+	margin-top:10vh;
+/* 	padding-top: 200px; */
+	
+}
+.cartNum{
+	white-space:nowrap;
+}
+.cart-width{
+	
+}
+.single_product img{
+	display:block;
+	height:40%;
+	width:auto;
+	
+}
+.imgCart{
+	height: 10%;
+	width:auto;
+}
+#menus {
+	background-color: #ccc;
+	border-radius:10px;
+	margin:2% 0 0 1%;
+	padding: 2% 0 2% 0;
+	width: 235px;
+}
+#menus li a{
+	color:#fff;
+}
+#user_menu{
+	margin-top:2%;
+	float:right;
+	margin-right:5%;
+	white-space:nowrap;
+	
+}
+#user_menu li{
+	width:25%;
+	display: inline;
+	background: #ccc;
+	border-radius:10px;
+	padding: 2%;
+}
+#user_menu li a{
+	color:#fff;
+}
+#user_menu li a:hover{
+	color:#009900;
+	text-decoration:none;
+}
