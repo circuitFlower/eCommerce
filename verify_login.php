@@ -12,8 +12,6 @@ if(! $query ){
 $row = mysql_fetch_array($query); 
 if ($row['pwrd'] == $_POST['pword']){
 	echo "You are logged in successfully";
-	session_start();
-	$_SESSION['cart'] = array();
 	$_SESSION['firstname'] = $row['firstname'];
 	$_SESSION['lastname'] = $row['lastname'];
 	$_SESSION['billingaddress'] = $row['billingaddress'];
@@ -23,7 +21,7 @@ if ($row['pwrd'] == $_POST['pword']){
 	$_SESSION['role'] = $row['role'];
 	} else {
 		echo "Please check your email address and password.";
-		}
+	}
 mysql_close($connect);
 ?>
 </div>

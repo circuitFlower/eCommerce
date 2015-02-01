@@ -3,7 +3,7 @@
 require 'inc/main.php';
 require 'inc/connect.php';
 $cart[]=$_SESSION['cart'];
-echo "session is: " . session_id();
+
 $productnamesearch=$_POST['productnamesearch'];
 
 $sql = "SELECT * FROM products WHERE `productuniqueid` = '$productnamesearch'";
